@@ -424,7 +424,14 @@ function ModelRow({
       </td>
 
       {/* Context */}
-      <td className="context-cell">{model.contextWindow ?? '—'}</td>
+      <td className="context-cell">
+        <div style={{ fontWeight: 500 }}>{model.contextWindow ?? '—'}</div>
+        {model.supports1MContext && (
+          <div style={{ fontSize: '0.75rem', color: '#10b981', marginTop: '0.2rem' }}>
+            ✨ +1M extra
+          </div>
+        )}
+      </td>
 
       {/* Notes */}
       <td className="notes-cell">{model.notes ?? ''}</td>

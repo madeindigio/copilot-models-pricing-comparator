@@ -15,6 +15,7 @@ export interface ModelPricing {
   outputPrice: number;     // $ per 1M tokens
   notes?: string;
   contextWindow?: string;
+  supports1MContext?: boolean;
   openrouterSlug?: string;
 }
 
@@ -42,6 +43,8 @@ export const models: ModelPricing[] = [
     inputPrice: 0.25,
     cachedInputPrice: 0.025,
     outputPrice: 2.00,
+    contextWindow: '192K',
+    supports1MContext: true,
     notes: 'Included model',
   },
   {
@@ -54,6 +57,8 @@ export const models: ModelPricing[] = [
     inputPrice: 1.75,
     cachedInputPrice: 0.175,
     outputPrice: 14.00,
+    contextWindow: '400K',
+    supports1MContext: true,
   },
   {
     id: 'gpt-5.2-codex',
@@ -65,6 +70,8 @@ export const models: ModelPricing[] = [
     inputPrice: 1.75,
     cachedInputPrice: 0.175,
     outputPrice: 14.00,
+    contextWindow: '400K',
+    supports1MContext: true,
   },
   {
     id: 'gpt-5.3-codex',
@@ -76,6 +83,8 @@ export const models: ModelPricing[] = [
     inputPrice: 1.75,
     cachedInputPrice: 0.175,
     outputPrice: 14.00,
+    contextWindow: '400K',
+    supports1MContext: true,
   },
   {
     id: 'gpt-5.4',
@@ -87,6 +96,8 @@ export const models: ModelPricing[] = [
     inputPrice: 2.50,
     cachedInputPrice: 0.25,
     outputPrice: 15.00,
+    contextWindow: '400K',
+    supports1MContext: true,
     notes: '≤272K tokens',
   },
   {
@@ -99,6 +110,8 @@ export const models: ModelPricing[] = [
     inputPrice: 0.75,
     cachedInputPrice: 0.075,
     outputPrice: 4.50,
+    contextWindow: '400K',
+    supports1MContext: true,
   },
   {
     id: 'gpt-5.4-nano',
@@ -134,6 +147,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.10,
     cacheWritePrice: 1.25,
     outputPrice: 5.00,
+    contextWindow: '200K',
+    supports1MContext: true,
   },
   {
     id: 'claude-sonnet-4',
@@ -146,6 +161,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.30,
     cacheWritePrice: 3.75,
     outputPrice: 15.00,
+    contextWindow: '200K',
+    supports1MContext: true,
   },
   {
     id: 'claude-sonnet-4.5',
@@ -158,6 +175,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.30,
     cacheWritePrice: 3.75,
     outputPrice: 15.00,
+    contextWindow: '200K',
+    supports1MContext: true,
   },
   {
     id: 'claude-sonnet-4.6',
@@ -170,6 +189,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.30,
     cacheWritePrice: 3.75,
     outputPrice: 15.00,
+    contextWindow: '200K',
+    supports1MContext: true,
   },
   {
     id: 'claude-opus-4.5',
@@ -242,6 +263,8 @@ export const models: ModelPricing[] = [
     inputPrice: 0.50,
     cachedInputPrice: 0.05,
     outputPrice: 3.00,
+    contextWindow: '90K',
+    supports1MContext: true,
     notes: 'No long-context surcharge',
   },
   {
@@ -254,6 +277,8 @@ export const models: ModelPricing[] = [
     inputPrice: 2.00,
     cachedInputPrice: 0.20,
     outputPrice: 12.00,
+    contextWindow: '90K',
+    supports1MContext: true,
     notes: '≤200K tokens',
   },
   {
@@ -266,6 +291,8 @@ export const models: ModelPricing[] = [
     inputPrice: 1.50,
     cachedInputPrice: 0.15,
     outputPrice: 9.00,
+    contextWindow: '90K',
+    supports1MContext: true,
   },
   // ── GitHub fine-tuned ────────────────────────────────────────────────────
   {
@@ -289,33 +316,36 @@ export const models: ModelPricing[] = [
     status: 'GA',
     category: 'Powerful',
     inputPrice: 0.98,
+    cachedInputPrice: 0.182,
     outputPrice: 3.08,
     contextWindow: '203K',
     openrouterSlug: 'z-ai/glm-5.1',
   },
   {
-    id: 'mimo-v2.5',
-    name: 'MiMo-V2.5',
+    id: 'mimo-v2.5-pro',
+    name: 'Xiaomi: MiMo-V2.5-Pro',
     provider: 'OpenRouter',
     source: 'OpenRouter',
     status: 'GA',
     category: 'Lightweight',
-    inputPrice: 0.14,
-    outputPrice: 0.28,
-    contextWindow: '1M',
-    openrouterSlug: 'mimo-org/mimo-vl-7b-rl',
+    inputPrice: 0.435,
+    cachedInputPrice: 0.0036,
+    outputPrice: 0.87,
+    contextWindow: '1.05M',
+    openrouterSlug: 'xiaomi/mimo-v2.5-pro',
   },
   {
     id: 'deepseek-v4-pro',
-    name: 'DeepSeek V4 Pro',
+    name: 'DeepSeek: V4 Pro',
     provider: 'OpenRouter',
     source: 'OpenRouter',
     status: 'GA',
     category: 'Powerful',
     inputPrice: 0.435,
+    cachedInputPrice: 0.003625,
     outputPrice: 0.87,
-    contextWindow: '1M',
-    openrouterSlug: 'deepseek/deepseek-v3',
+    contextWindow: '1.05M',
+    openrouterSlug: 'deepseek/deepseek-v4-pro',
   },
   {
     id: 'kimi-k2.6',
@@ -325,9 +355,36 @@ export const models: ModelPricing[] = [
     status: 'GA',
     category: 'Powerful',
     inputPrice: 0.684,
+    cachedInputPrice: 0.144,
     outputPrice: 3.42,
-    contextWindow: '131K',
-    openrouterSlug: 'moonshotai/kimi-k2',
+    contextWindow: '262K',
+    openrouterSlug: 'moonshotai/kimi-k2.6',
+  },
+  {
+    id: 'qwen3.7-max',
+    name: 'Qwen: Qwen3.7 Max',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 1.25,
+    cachedInputPrice: 0.25,
+    outputPrice: 3.75,
+    contextWindow: '1M',
+    openrouterSlug: 'qwen/qwen3.7-max',
+  },
+  {
+    id: 'minimax-m3',
+    name: 'MiniMax: M3',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Versatile',
+    inputPrice: 0.30,
+    cachedInputPrice: 0.06,
+    outputPrice: 1.20,
+    contextWindow: '1.05M',
+    openrouterSlug: 'minimax/minimax-m3',
   },
 ];
 
