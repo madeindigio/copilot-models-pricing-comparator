@@ -221,7 +221,7 @@ export default function App() {
   const [sourceFilter, setSourceFilter] = useState<Source | typeof ALL>(ALL);
   const [providerFilter, setProviderFilter] = useState<Provider | typeof ALL>(ALL);
   const [categoryFilter, setCategoryFilter] = useState<Category | typeof ALL>(ALL);
-  const [sortKey, setSortKey] = useState<SortKey>('provider');
+  const [sortKey, setSortKey] = useState<SortKey>('inputPrice');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
 
   const providers: (Provider | typeof ALL)[] = [ALL, 'OpenAI', 'Anthropic', 'Google', 'GitHub', 'OpenRouter'];
