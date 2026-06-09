@@ -294,19 +294,6 @@ export const models: ModelPricing[] = [
     contextWindow: '90K',
     supports1MContext: true,
   },
-  // ── GitHub fine-tuned ────────────────────────────────────────────────────
-  {
-    id: 'raptor-mini',
-    name: 'Raptor mini',
-    provider: 'GitHub',
-    source: 'GitHub Copilot',
-    status: 'Public preview',
-    category: 'Versatile',
-    inputPrice: 0.25,
-    cachedInputPrice: 0.025,
-    outputPrice: 2.00,
-    notes: 'Uses GPT-5 mini pricing',
-  },
   // ── OpenRouter ───────────────────────────────────────────────────────────
   {
     id: 'glm-5.1',
