@@ -348,6 +348,18 @@ export const models: ModelPricing[] = [
     openrouterSlug: 'moonshotai/kimi-k2.6',
   },
   {
+    id: 'kimi-k2.7-code',
+    name: 'MoonshotAI: Kimi K2.7 Code',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 0.75,
+    outputPrice: 3.50,
+    contextWindow: '262K',
+    openrouterSlug: 'moonshotai/kimi-k2.7-code',
+  },
+  {
     id: 'qwen3.7-max',
     name: 'Qwen: Qwen3.7 Max',
     provider: 'OpenRouter',

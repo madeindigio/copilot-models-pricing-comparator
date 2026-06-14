@@ -84,9 +84,18 @@ const nonFrontierDetails: NonFrontierDetail[] = [
     prioritization: 'Prioritize for multi-step agent workflows requiring strong logical reasoning and complex code orchestration at a mid-tier price.',
   },
   {
+    id: 'kimi-k2.7-code',
+    creator: 'MoonshotAI',
+    powerLevel: 5,
+    powerText: 'Coding & Reasoning MoE (32B/1T params)',
+    features: 'Native multimodal (text/image) model with always-on thinking/reasoning mode and 262K context window. Activates 32B of 1T parameters.',
+    recommendedUse: 'End-to-end code generation, long-context refactoring, complex debugging, and agentic task decomposition.',
+    prioritization: 'Prioritize for multi-file developer workflows requiring deep reasoning, thinking capability, and multimodal input at a competitive code-tier price ($0.75/M input).',
+  },
+  {
     id: 'deepseek-v4-pro',
     creator: 'DeepSeek',
-    powerLevel: 5,
+    powerLevel: 6,
     powerText: 'Advanced Reasoning MoE (1.6T params)',
     features: 'Extremely strong logical and mathematical reasoning. Supports both thinking (deep reasoning) and non-thinking modes.',
     recommendedUse: 'Advanced software engineering, complex logical problem solving, deep debugging, and autonomous workflows.',
@@ -95,7 +104,7 @@ const nonFrontierDetails: NonFrontierDetail[] = [
   {
     id: 'qwen3.7-max',
     creator: 'Qwen',
-    powerLevel: 6,
+    powerLevel: 7,
     powerText: 'Flagship Agentic / Software Expert',
     features: 'Flagship agentic reasoning and top-tier expertise in code generation and legacy migration.',
     recommendedUse: 'End-to-end software development, complex legacy code migrations, and high-precision code generation.',
@@ -144,7 +153,7 @@ function NonFrontierDropdown() {
           <div className="feature-models-list">
             {enrichedModels.map((m) => {
               const borderClass = m.provider === 'GitHub' ? 'border-github' : 'border-openrouter';
-              const powerPercentage = (m.powerLevel / 6) * 100;
+              const powerPercentage = (m.powerLevel / 7) * 100;
               return (
                 <div key={m.id} className={`feature-model-card ${borderClass}`}>
                   <div className="card-header">
