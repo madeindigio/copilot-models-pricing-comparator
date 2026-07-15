@@ -23,6 +23,8 @@
   --google-color: #4285f4;
   --github-color: #f0f0f0;
   --openrouter-color: #9b59e8;
+  --microsoft-color: #00a4ef;
+  --moonshot-color: #ff6b35;
 
   /* Categories */
   --lightweight-color: #22c55e;
@@ -374,6 +376,8 @@ td {
 .provider-badge.provider-google   { color: var(--google-color);     background: rgba(66,133,244,0.1);   border-color: rgba(66,133,244,0.3); }
 .provider-badge.provider-github   { color: var(--github-color);     background: rgba(240,240,240,0.07); border-color: rgba(240,240,240,0.2); }
 .provider-badge.provider-openrouter{ color: var(--openrouter-color); background: rgba(155,89,232,0.1);  border-color: rgba(155,89,232,0.3); }
+.provider-badge.provider-microsoft{ color: var(--microsoft-color);  background: rgba(0,164,239,0.1);    border-color: rgba(0,164,239,0.3); }
+.provider-badge.provider-moonshot { color: var(--moonshot-color);   background: rgba(255,107,53,0.1);   border-color: rgba(255,107,53,0.3); }
 
 /* === Category Badge === */
 .category-badge {
@@ -807,6 +811,8 @@ footer a:hover { text-decoration: underline; }
 /* Provider Borders */
 .border-github { border-left: 3px solid var(--github-color); }
 .border-openrouter { border-left: 3px solid var(--openrouter-color); }
+.border-microsoft { border-left: 3px solid var(--microsoft-color); }
+.border-moonshot { border-left: 3px solid var(--moonshot-color); }
 
 /* === Responsive === */
 @media (max-width: 900px) {
