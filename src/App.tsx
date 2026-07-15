@@ -296,7 +296,7 @@ export default function App() {
             <div className="logo-icon">🤖</div>
             AI Model Pricing
           </div>
-          <span className="header-badge">Updated June 2026</span>
+          <span className="header-badge">Updated July 2026</span>
         </div>
       </header>
 
@@ -317,7 +317,7 @@ export default function App() {
               <span className="dot" style={{ background: '#9b59e8' }} />
               OpenRouter
             </span>
-            <span className="hero-pill">📅 1 Jun 2026</span>
+            <span className="hero-pill">📅 15 Jul 2026</span>
           </div>
         </section>
 
@@ -516,7 +516,7 @@ export default function App() {
           <a href="https://openrouter.ai/models" target="_blank" rel="noreferrer">
             OpenRouter
           </a>
-          . Prices as of 1 June 2026. Not affiliated with GitHub or OpenRouter.
+          . Prices as of 15 July 2026. Not affiliated with GitHub or OpenRouter.
         </p>
       </footer>
     </div>
