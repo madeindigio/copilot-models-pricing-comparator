@@ -233,7 +233,7 @@ export default function App() {
   const [sortKey, setSortKey] = useState<SortKey>('inputPrice');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
 
-  const providers: (Provider | typeof ALL)[] = [ALL, 'OpenAI', 'Anthropic', 'Google', 'GitHub', 'OpenRouter'];
+  const providers: (Provider | typeof ALL)[] = [ALL, 'OpenAI', 'Anthropic', 'Google', 'GitHub', 'OpenRouter', 'Moonshot AI', 'Xiaomi', 'Alibaba'];
   const categories: (Category | typeof ALL)[] = [ALL, 'Lightweight', 'Versatile', 'Powerful'];
   const sources: (Source | typeof ALL)[] = [ALL, 'GitHub Copilot', 'OpenRouter'];
 

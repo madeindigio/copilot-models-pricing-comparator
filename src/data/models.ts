@@ -1,5 +1,5 @@
 export type Category = 'Lightweight' | 'Versatile' | 'Powerful';
-export type Provider = 'OpenAI' | 'Anthropic' | 'Google' | 'GitHub' | 'OpenRouter' | 'Microsoft' | 'Moonshot AI';
+export type Provider = 'OpenAI' | 'Anthropic' | 'Google' | 'GitHub' | 'OpenRouter' | 'Microsoft' | 'Moonshot AI' | 'Xiaomi' | 'Alibaba';
 export type Source = 'GitHub Copilot' | 'OpenRouter';
 
 export interface ModelPricing {
@@ -568,6 +568,48 @@ export const models: ModelPricing[] = [
     contextWindow: '1.05M',
     openrouterSlug: 'minimax/minimax-m3',
   },
+  // ── Xiaomi ────────────────────────────────────────────────────────────────
+  {
+    id: 'mimo-v2.5',
+    name: 'Xiaomi: MiMo-V2.5',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Lightweight',
+    inputPrice: 0.14,
+    cachedInputPrice: 0.0028,
+    outputPrice: 0.28,
+    contextWindow: '1.05M',
+    openrouterSlug: 'xiaomi/mimo-v2.5',
+  },
+  // ── Moonshot AI (Kimi K3) ─────────────────────────────────────────────────
+  {
+    id: 'kimi-k3',
+    name: 'MoonshotAI: Kimi K3',
+    provider: 'Moonshot AI',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 3.00,
+    cachedInputPrice: 0.30,
+    outputPrice: 15.00,
+    contextWindow: '1M',
+    openrouterSlug: 'moonshotai/kimi-k3',
+  },
+  // ── Alibaba (Qwen) ────────────────────────────────────────────────────────
+  {
+    id: 'qwen3.8-max-preview',
+    name: 'Qwen: Qwen3.8 Max Preview',
+    provider: 'Alibaba',
+    source: 'OpenRouter',
+    status: 'Public preview',
+    category: 'Powerful',
+    inputPrice: 0.00,
+    cachedInputPrice: 0.00,
+    outputPrice: 0.00,
+    contextWindow: '1M',
+    notes: 'Free preview (beta)',
+  },
 ];
 
 export const providerColors: Record<Provider, string> = {
@@ -578,6 +620,8 @@ export const providerColors: Record<Provider, string> = {
   OpenRouter: 'provider-openrouter',
   Microsoft: 'provider-microsoft',
   'Moonshot AI': 'provider-moonshot',
+  Xiaomi: 'provider-xiaomi',
+  Alibaba: 'provider-alibaba',
 };
 
 export const categoryColors: Record<Category, string> = {
