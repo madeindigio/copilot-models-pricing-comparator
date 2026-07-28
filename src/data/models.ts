@@ -453,6 +453,19 @@ export const models: ModelPricing[] = [
     contextWindow: '90K',
     supports1MContext: true,
   },
+  {
+    id: 'gemini-3.6-flash',
+    name: 'Gemini 3.6 Flash',
+    provider: 'Google',
+    source: 'GitHub Copilot',
+    status: 'GA',
+    category: 'Lightweight',
+    inputPrice: 1.50,
+    cachedInputPrice: 0.15,
+    outputPrice: 7.50,
+    contextWindow: '1M',
+    supports1MContext: true,
+  },
   // ── Microsoft ────────────────────────────────────────────────────────────
   {
     id: 'mai-code-1-flash',
