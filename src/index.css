@@ -27,6 +27,7 @@
   --moonshot-color: #ff6b35;
   --xiaomi-color: #ff6700;
   --alibaba-color: #ff6a00;
+  --xai-color: #f97316;
 
   /* Categories */
   --lightweight-color: #22c55e;
@@ -382,6 +383,7 @@ td {
 .provider-badge.provider-moonshot { color: var(--moonshot-color);   background: rgba(255,107,53,0.1);   border-color: rgba(255,107,53,0.3); }
 .provider-badge.provider-xiaomi  { color: #ff6700;                  background: rgba(255,103,0,0.1);     border-color: rgba(255,103,0,0.3); }
 .provider-badge.provider-alibaba { color: #ff6a00;                  background: rgba(255,106,0,0.1);     border-color: rgba(255,106,0,0.3); }
+.provider-badge.provider-xai      { color: var(--xai-color);         background: rgba(249,115,22,0.1);    border-color: rgba(249,115,22,0.3); }
 
 /* === Category Badge === */
 .category-badge {

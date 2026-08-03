@@ -1,5 +1,5 @@
 export type Category = 'Lightweight' | 'Versatile' | 'Powerful';
-export type Provider = 'OpenAI' | 'Anthropic' | 'Google' | 'GitHub' | 'OpenRouter' | 'Microsoft' | 'Moonshot AI' | 'Xiaomi' | 'Alibaba';
+export type Provider = 'OpenAI' | 'Anthropic' | 'Google' | 'GitHub' | 'OpenRouter' | 'Microsoft' | 'Moonshot AI' | 'Xiaomi' | 'Alibaba' | 'x.ai';
 export type Source = 'GitHub Copilot' | 'OpenRouter';
 
 export interface ModelPricing {
@@ -505,6 +505,20 @@ export const models: ModelPricing[] = [
     openrouterSlug: 'z-ai/glm-5.1',
   },
   {
+    id: 'glm-5.2',
+    name: 'Z.ai: GLM 5.2',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 0.6146,
+    cachedInputPrice: 0.11414,
+    outputPrice: 1.9316,
+    contextWindow: '1M',
+    supports1MContext: true,
+    openrouterSlug: 'z-ai/glm-5.2',
+  },
+  {
     id: 'mimo-v2.5-pro',
     name: 'Xiaomi: MiMo-V2.5-Pro',
     provider: 'OpenRouter',
@@ -529,6 +543,20 @@ export const models: ModelPricing[] = [
     outputPrice: 0.87,
     contextWindow: '1.05M',
     openrouterSlug: 'deepseek/deepseek-v4-pro',
+  },
+  {
+    id: 'deepseek-v4-flash-0731',
+    name: 'DeepSeek: V4 Flash 0731',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Lightweight',
+    inputPrice: 0.09,
+    cachedInputPrice: 0.018,
+    outputPrice: 0.18,
+    contextWindow: '1.05M',
+    supports1MContext: true,
+    openrouterSlug: 'deepseek/deepseek-v4-flash-0731',
   },
   {
     id: 'kimi-k2.6',
@@ -581,6 +609,47 @@ export const models: ModelPricing[] = [
     contextWindow: '1.05M',
     openrouterSlug: 'minimax/minimax-m3',
   },
+  {
+    id: 'grok-4.5-openrouter',
+    name: 'x.ai: Grok 4.5',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 2.00,
+    cachedInputPrice: 0.30,
+    outputPrice: 6.00,
+    contextWindow: '500K',
+    openrouterSlug: 'x-ai/grok-4.5',
+  },
+  {
+    id: 'qwen3.7-flash',
+    name: 'Qwen: Qwen3.7 Flash',
+    provider: 'OpenRouter',
+    source: 'OpenRouter',
+    status: 'GA',
+    category: 'Lightweight',
+    inputPrice: 0.03,
+    cachedInputPrice: 0.006,
+    cacheWritePrice: 0.038,
+    outputPrice: 0.13,
+    contextWindow: '1M',
+    supports1MContext: true,
+    openrouterSlug: 'qwen/qwen3.7-flash',
+  },
+  // ── x.ai ──────────────────────────────────────────────────────────────────
+  {
+    id: 'grok-4.5',
+    name: 'x.ai: Grok 4.5',
+    provider: 'x.ai',
+    source: 'GitHub Copilot',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 2.00,
+    cachedInputPrice: 0.50,
+    outputPrice: 6.00,
+    contextWindow: '500K',
+  },
   // ── Xiaomi ────────────────────────────────────────────────────────────────
   {
     id: 'mimo-v2.5',
@@ -611,17 +680,19 @@ export const models: ModelPricing[] = [
   },
   // ── Alibaba (Qwen) ────────────────────────────────────────────────────────
   {
-    id: 'qwen3.8-max-preview',
-    name: 'Qwen: Qwen3.8 Max Preview',
-    provider: 'Alibaba',
+    id: 'qwen3.8-max',
+    name: 'Qwen: Qwen3.8 Max',
+    provider: 'OpenRouter',
     source: 'OpenRouter',
-    status: 'Public preview',
+    status: 'GA',
     category: 'Powerful',
-    inputPrice: 0.00,
-    cachedInputPrice: 0.00,
-    outputPrice: 0.00,
+    inputPrice: 2.00,
+    cachedInputPrice: 0.25,
+    cacheWritePrice: 2.50,
+    outputPrice: 6.00,
     contextWindow: '1M',
-    notes: 'Free preview (beta)',
+    supports1MContext: true,
+    openrouterSlug: 'qwen/qwen3.8-max',
   },
 ];
 
@@ -635,6 +706,7 @@ export const providerColors: Record<Provider, string> = {
   'Moonshot AI': 'provider-moonshot',
   Xiaomi: 'provider-xiaomi',
   Alibaba: 'provider-alibaba',
+  'x.ai': 'provider-xai',
 };
 
 export const categoryColors: Record<Category, string> = {
