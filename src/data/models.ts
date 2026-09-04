@@ -31,6 +31,8 @@ export const models: ModelPricing[] = [
     inputPrice: 2.00,
     cachedInputPrice: 0.50,
     outputPrice: 8.00,
+    contextWindow: '1M',
+    supports1MContext: true,
     notes: 'Included model',
   },
   {
@@ -137,6 +139,8 @@ export const models: ModelPricing[] = [
     inputPrice: 0.20,
     cachedInputPrice: 0.02,
     outputPrice: 1.25,
+    contextWindow: '400K',
+    supports1MContext: true,
   },
   {
     id: 'gpt-5.5',
@@ -318,6 +322,7 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.50,
     cacheWritePrice: 6.25,
     outputPrice: 25.00,
+    contextWindow: '200K',
   },
   {
     id: 'claude-opus-4.6',
@@ -330,6 +335,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.50,
     cacheWritePrice: 6.25,
     outputPrice: 25.00,
+    contextWindow: '1M',
+    supports1MContext: true,
   },
   {
     id: 'claude-opus-4.7',
@@ -342,6 +349,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.50,
     cacheWritePrice: 6.25,
     outputPrice: 25.00,
+    contextWindow: '200K',
+    supports1MContext: true,
   },
   {
     id: 'claude-opus-4.8',
@@ -354,6 +363,8 @@ export const models: ModelPricing[] = [
     cachedInputPrice: 0.50,
     cacheWritePrice: 6.25,
     outputPrice: 25.00,
+    contextWindow: '200K',
+    supports1MContext: true,
   },
   {
     id: 'claude-sonnet-5',
@@ -399,6 +410,20 @@ export const models: ModelPricing[] = [
     contextWindow: '200K',
     supports1MContext: true,
   },
+  {
+    id: 'claude-fable-5.1',
+    name: 'Claude Fable 5.1',
+    provider: 'Anthropic',
+    source: 'GitHub Copilot',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 10.00,
+    cachedInputPrice: 0.25,
+    cacheWritePrice: 12.50,
+    outputPrice: 50.00,
+    contextWindow: '1M',
+    supports1MContext: true,
+  },
   // ── Google ───────────────────────────────────────────────────────────────
   {
     id: 'gemini-2.5-pro',
@@ -410,6 +435,8 @@ export const models: ModelPricing[] = [
     inputPrice: 1.25,
     cachedInputPrice: 0.125,
     outputPrice: 10.00,
+    contextWindow: '1M',
+    supports1MContext: true,
     notes: '≤200K tokens',
   },
   {
@@ -467,6 +494,20 @@ export const models: ModelPricing[] = [
     supports1MContext: true,
     notes: 'Promotional pricing through Dec 31, 2026',
   },
+  {
+    id: 'gemini-3.8-flash',
+    name: 'Gemini 3.8 Flash',
+    provider: 'Google',
+    source: 'GitHub Copilot',
+    status: 'GA',
+    category: 'Versatile',
+    inputPrice: 0.75,
+    cachedInputPrice: 0.075,
+    outputPrice: 3.75,
+    contextWindow: '1M',
+    supports1MContext: true,
+    notes: 'Promotional pricing through Dec 31, 2026',
+  },
   // ── Microsoft ────────────────────────────────────────────────────────────
   {
     id: 'mai-code-1-flash',
@@ -478,6 +519,7 @@ export const models: ModelPricing[] = [
     inputPrice: 0.75,
     cachedInputPrice: 0.075,
     outputPrice: 4.50,
+    contextWindow: '256K',
   },
   {
     id: 'mai-code-1.1-flash',
@@ -489,6 +531,7 @@ export const models: ModelPricing[] = [
     inputPrice: 0.20,
     cachedInputPrice: 0.02,
     outputPrice: 1.20,
+    contextWindow: '256K',
   },
   // ── Moonshot AI ──────────────────────────────────────────────────────────
   {
@@ -501,6 +544,7 @@ export const models: ModelPricing[] = [
     inputPrice: 0.95,
     cachedInputPrice: 0.19,
     outputPrice: 4.00,
+    contextWindow: '256K',
   },
   {
     id: 'kimi-k3-copilot',
