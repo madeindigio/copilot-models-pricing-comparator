@@ -296,7 +296,7 @@ export default function App() {
             <div className="logo-icon">🤖</div>
             AI Model Pricing
           </div>
-          <span className="header-badge">Updated September 2026</span>
+          <span className="header-badge">Updated October 2026</span>
         </div>
       </header>
 
