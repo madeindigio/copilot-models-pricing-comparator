@@ -706,6 +706,20 @@ export const models: ModelPricing[] = [
     supports1MContext: true,
     notes: 'Promotional pricing through Dec 31, 2026',
   },
+  {
+    id: 'gemini-4-argon',
+    name: 'Gemini 4 Argon',
+    provider: 'Google',
+    source: 'GitHub Copilot',
+    status: 'GA',
+    category: 'Powerful',
+    inputPrice: 2.00,
+    cachedInputPrice: 0.10,
+    outputPrice: 10.00,
+    contextWindow: '1M',
+    supports1MContext: true,
+    notes: 'Promotional pricing until Dec 1, 2026',
+  },
   // ── Microsoft ────────────────────────────────────────────────────────────
   {
     id: 'mai-code-1-flash',

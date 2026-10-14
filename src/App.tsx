@@ -317,7 +317,7 @@ export default function App() {
               <span className="dot" style={{ background: '#9b59e8' }} />
               OpenRouter
             </span>
-            <span className="hero-pill">📅 30 Sep 2026</span>
+            <span className="hero-pill">📅 14 Oct 2026</span>
           </div>
         </section>
 
@@ -516,7 +516,7 @@ export default function App() {
           <a href="https://openrouter.ai/models" target="_blank" rel="noreferrer">
             OpenRouter
           </a>
-          . Prices as of 30 September 2026. Not affiliated with GitHub or OpenRouter.
+          . Prices as of 14 October 2026. Not affiliated with GitHub or OpenRouter.
         </p>
       </footer>
     </div>

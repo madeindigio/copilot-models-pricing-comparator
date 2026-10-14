@@ -70,7 +70,19 @@ After every modification, fix, or refactor, record a summary with `kb_add_docume
    - Add a color in `providerColors` (`src/data/models.ts`).
    - Create a CSS variable and class `.provider-badge.provider-<slug>` in `src/index.css`.
    - Add it to the `providers` array in `src/App.tsx` for the filter.
-4. Run `npm run lint && npm run build` before considering it done.
+4. **MANDATORY: update the "last updated" date** to today in every place it appears (see "Data update date" below).
+5. Run `npm run lint && npm run build` before considering it done.
+
+## Data update date (MANDATORY)
+Any change to model data (new model, price change, removal) MUST also update the data date to the current day in **all** of these places, keeping each one's format:
+| Location | Format |
+|----------|--------|
+| `src/App.tsx` — `.header-badge` | `Updated October 2026` (month + year) |
+| `src/App.tsx` — `.hero-pill` | `📅 8 Oct 2026` (short day + month + year) |
+| `src/App.tsx` — footer | `Prices as of 8 October 2026.` (full date) |
+| `index.html` — `<meta name="description">` | `Updated October 2026.` (month + year) |
+
+Before finishing, run `grep -rn "Updated \|📅\|Prices as of" src/App.tsx index.html` and confirm all four show today's date.
 
 ## Critical files
 | File | Purpose |
@@ -84,3 +96,4 @@ After every modification, fix, or refactor, record a summary with `kb_add_docume
 - Do not convert data to backend/DB without consensus: it remains static.
 - Do not break the `Provider` type or its associated CSS classes.
 - Do not skip `npm run build` after changing types or adding models.
+- Do not change model data without updating the data date in all four locations.
